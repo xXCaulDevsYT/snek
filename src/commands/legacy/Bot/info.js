@@ -22,7 +22,7 @@ module.exports = {
             { name: 'Uptime', value: `**${days}d ${hours}h ${minutes}m ${seconds}s**`, inline: true },
             { name: 'Servers', value: `\`${client.guilds.cache.size}\``, inline: true },
             { name: 'Users', value: `\`${client.users.cache.size}\``, inline: true },
-            { name: 'Library', value: '`discord.js`', inline: true }
+            { name: 'Version', value: '`1.0.1-beta`', inline: true }
         )
         .setThumbnail(client.user.displayAvatarURL())
         .setColor(client.config.embedColor)
