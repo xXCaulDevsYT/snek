@@ -15,7 +15,7 @@ module.exports = {
 
         let infoEmbed = new client.discord.MessageEmbed()
         .setTitle('Hiss... Im Awake')
-        .setDescription('I have been awake for\n**${days}d ${hours}h ${minutes}m ${seconds}s**')
+        .setDescription(`I have been awake for\n**${days}d ${hours}h ${minutes}m ${seconds}s**`)
         .setColor(client.config.embedColor)
 
         message.reply({ allowedMentions: { repliedUser: false }, embeds: [infoEmbed] });
