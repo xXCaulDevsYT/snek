@@ -19,7 +19,7 @@ module.exports = {
         .addFields(
             { name: 'Owner / Developer', value: '`Its Sorrow#9670`', inline: true },
             { name: 'Hatched On', value: '`August 21st, 2022`', inline: true },
-            { name: 'Uptime', value: `**${days}d ${hours}h ${minutes}m ${seconds}s**`, inline: true },
+            { name: 'Uptime', value: `\`${days}d\` | \`${hours}h\` | \`${minutes}m\` | \`${seconds}s\``, inline: true },
             { name: 'Servers', value: `\`${client.guilds.cache.size}\``, inline: true },
             { name: 'Users', value: `\`${client.users.cache.size}\``, inline: true },
             { name: 'Version', value: '`1.0.1-beta`', inline: true }
