@@ -58,7 +58,7 @@ module.exports = {
                 .setColor(client.config.embedColor)
                 .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
-            return message.reply({ allowedMentions: { repliedUser: false }, embeds: [helpEmbed], components: [row] });
+            return message.channel.send({ allowedMentions: { repliedUser: false }, embeds: [helpEmbed], components: [row] });
         } else {
             const command = client.commands.get(args[0].toLowerCase()) || client.commands.find((c) => c.aliases && c.aliases.includes(args[0].toLowerCase()));
 
