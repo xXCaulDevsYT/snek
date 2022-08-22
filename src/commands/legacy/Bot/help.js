@@ -52,9 +52,9 @@ module.exports = {
             // This is what it commands when using the command without arguments
             const helpEmbed = new client.discord.MessageEmbed()
                 .setTitle(`${client.user.username} Help`)
-                .setDescription(` Hello **<@${message.author.id}>**, I am <@${client.user.id}>.  \nYou can use \`!help <command>\` to see more info about the commands!\n**Total Commands:** ${client.commands.size}\n**Total SlashCommands:** ${client.slash.size}`)
-                .addField("🤖 - Bot Commands", botCommandsList.map((data) => `${data}`).join(", "), true)
-                .addField("🛠 - Utility Commands", utilityCommandsList.map((data) => `${data}`).join(", "), true)
+                .setDescription(` Hello **<@${message.author.id}>**, I am snek, hiss...  \nYou can use \`!help <command>\` to see more info about a certain command!\n**Total Commands:** ${client.commands.size}\n**Total Slash Commands:** ${client.slash.size}`)
+                .addField("Default", botCommandsList.map((data) => `${data}`).join(", "), true)
+                .addField("Utility", utilityCommandsList.map((data) => `${data}`).join(", "), true)
                 .setColor(client.config.embedColor)
                 .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
