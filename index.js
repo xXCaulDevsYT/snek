@@ -4,6 +4,7 @@ console.debug(`Booting up…`);
 const Discord = require('discord.js');
 const { Client, Collection, Intents } = Discord;
 const handler = require("./src/handlers/index");
+const fetch = require("node-fetch");
 
 const client = new Client({
     intents: [
