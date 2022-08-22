@@ -36,7 +36,7 @@ client.on('messageCreate', async (message) => {
         }
 
         if (message.author.bot) return;
-fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.ENV.SNEKAPI}=${uid}&msg=${msg}`)
+fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI}=${uid}&msg=${msg}`)
     .then(res => res.json())
     .then(data => {
         return message.reply(`${data.cnt}`);
