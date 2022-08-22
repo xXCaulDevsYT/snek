@@ -14,7 +14,7 @@ module.exports = {
         let seconds = Math.floor(client.uptime / 1000) % 60;
 
         let infoEmbed = new client.discord.MessageEmbed()
-        .setAuthor({ name: 'Information', iconURL: client.displayAvatarURL() })
+        .setAuthor({ name: 'Information', iconURL: client.user.displayAvatarURL() })
         .setDescription('Hisss... Hello I am snek heres some info about me.')
         .addFields(
             { name: 'Owner / Developer', value: '`Its Sorrow#9670`', inline: true },
@@ -24,6 +24,7 @@ module.exports = {
             { name: 'Users', value: `\`${client.users.cache.size}\``, inline: true },
             { name: 'Library', value: '`discord.js`', inline: true }
         )
+        .setThumbnail(client.user.displayAvatarURL())
         .setColor(client.config.embedColor)
 
         message.reply({ allowedMentions: { repliedUser: false }, embeds: [infoEmbed] });
