@@ -1,0 +1,25 @@
+{
+    "name": "snek-boy",
+    "version": "1.0.0",
+    "description": "Just your average discord snek",
+    "main": "index.js",
+    "author": "Its Sorrow#9670",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "keywords": [],
+    "license": "ISC",
+    "dependencies": {
+      "discord.js": "^13.3.1",
+      "dotenv": "^10.0.0",
+      "glob": "^7.2.0",
+      "chalk": "^4.1.0",
+      "fs": "^0.0.1-security"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/xXCaulDevsYT/snek.git"
+    },
+    "bugs": "https://github.com/xXCaulDevsYT/snek/issues",
+    "homepage": "https://github.com/xXCaulDevsYT/snek#readme"
+  }
