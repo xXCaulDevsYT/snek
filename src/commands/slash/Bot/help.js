@@ -54,10 +54,10 @@ module.exports = {
 
             // This is what it commands when using the command without arguments
             const helpEmbed = new client.discord.MessageEmbed()
-                .setTitle(`${client.user.username} SlashHelp`)
-                .setDescription(` Hello **<@${interaction.member.id}>**, I am <@${client.user.id}>.  \nYou can use \`/help <slash_command>\` to see more info about the SlashCommands!\n**Total Commands:** ${client.commands.size}\n**Total SlashCommands:** ${client.slash.size}`)
-                .addField("🤖 - Bot SlashCommands", botCommandsList.map((data) => `${data}`).join(", "), true)
-                .addField("🛠 - Utility SlashCommands", utilityCommandsList.map((data) => `${data}`).join(", "), true)
+                .setTitle(`Hissssss... Let me help you!`)
+                .setDescription(` Hello **<@${interaction.member.id}>**, I am snek, hiss...  \nYou can use \`/help command>\` to see more info about about a certain slash command!\n**Total Commands:** ${client.commands.size}\n**Total Slash Commands:** ${client.slash.size}`)
+                .addField("Default", botCommandsList.map((data) => `${data}`).join(", "), true)
+                .addField("Utility", utilityCommandsList.map((data) => `${data}`).join(", "), true)
                 .setColor(client.config.embedColor)
                 .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
@@ -65,12 +65,10 @@ module.exports = {
         } else {
             const command = client.slash.get(commandInt.toLowerCase());
 
-            // This is what it sends when using the command with argument and it does not find the command
             if (!command) {
-                interaction.reply({ content: `There isn't any SlashCommand named "${commandInt}"` });
+                interaction.reply({ content: `There isnt a slash command named "${commandInt}"` });
             } else {
 
-                // This is what it sends when using the command with argument and if it finds the command
                 let command = client.slash.get(commandInt.toLowerCase());
                 let name = command.name;
                 let description = command.description || "No descrpition provided"
@@ -78,7 +76,7 @@ module.exports = {
                 let category = command.category || "No category provided!"
 
                 let helpCmdEmbed = new client.discord.MessageEmbed()
-                    .setTitle(`${client.user.username} Help | \`${(name.toLocaleString())}\` SlashCommand`)
+                    .setTitle(`${client.user.username} Help | \`${(name.toLocaleString())}\` Slash Command`)
                     .addFields(
                         { name: "Description", value: `${description}` },
                         { name: "Usage", value: `${usage}` },
