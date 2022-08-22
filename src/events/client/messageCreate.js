@@ -19,5 +19,13 @@ module.exports = {
         }
         
         await command.run(client, message, args);
+        
+        if (message.content.startsWith('<@1011082761093787758>') || message.content.startsWith('<@!1011082761093787758>')) {
+
+            if (message.content.includes('hi' || 'hello' || 'hey' || 'sup' || 'wassup')) {
+                return message.reply('Hello!')
+            }
+
+        }
     }
 }
