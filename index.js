@@ -4,7 +4,6 @@ console.debug(`Booting up…`);
 const Discord = require('discord.js');
 const { Client, Collection, Intents } = Discord;
 const handler = require("./src/handlers/index");
-const fetch = require("node-fetch");
 
 const client = new Client({
     intents: [
@@ -32,13 +31,14 @@ client.on('messageCreate', async (message) => {
 
     if(message.channel.id === '1011138124723802132') {
         if (message.author.bot) return;
-fetch(`http://api.brainshop.ai/get?bid=168734&key=pT7Dflc5r4hPfnA1&uid=${uid}&msg=${msg}`)
+fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.ENV.SNEKAPI}=${uid}&msg=${msg}`)
     .then(res => res.json())
     .then(data => {
         return message.reply(`${data.cnt}`);
     });
     }
 });
+
 
 // Call .env file to get Token
 require('dotenv').config();
