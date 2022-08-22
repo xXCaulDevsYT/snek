@@ -26,6 +26,10 @@ const client = new Client({
 });
 
 client.on('messageCreate', async (message) => {
+    
+    let uid = message.author.id;
+    let msg = message.content;
+
     if(message.channel.id === '1011138124723802132') {
 fetch(`http://api.brainshop.ai/get?bid=168734&key=pT7Dflc5r4hPfnA1&uid=${uid}&msg=${msg}`)
     .then(res => res.json())
