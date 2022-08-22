@@ -1,2 +1,2 @@
-# snek
-Just your simple pissy snek bot.
+## Snek.
+My upcoming open sourced discord bot.
