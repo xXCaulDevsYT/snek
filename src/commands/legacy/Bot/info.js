@@ -14,8 +14,16 @@ module.exports = {
         let seconds = Math.floor(client.uptime / 1000) % 60;
 
         let infoEmbed = new client.discord.MessageEmbed()
-        .setTitle('Hiss... Im Awake')
-        .setDescription(`I have been awake for\n**${days}d ${hours}h ${minutes}m ${seconds}s**`)
+        .setAuthor({ name: 'Information', iconURL: client.displayAvatarURL() })
+        .setDescription('Hisss... Hello I am snek heres some info about me.')
+        .addFields(
+            { name: 'Owner / Developer', value: '`Its Sorrow#9670`', inline: true },
+            { name: 'Hatched On', value: '`August 21st, 2022`', inline: true },
+            { name: 'Uptime', value: `**${days}d ${hours}h ${minutes}m ${seconds}s**`, inline: true },
+            { name: 'Servers', value: `\`${client.guilds.cache.size}\``, inline: true },
+            { name: 'Users', value: `\`${client.users.cache.size}\``, inline: true },
+            { name: 'Library', value: '`discord.js`', inline: true }
+        )
         .setColor(client.config.embedColor)
 
         message.reply({ allowedMentions: { repliedUser: false }, embeds: [infoEmbed] });
