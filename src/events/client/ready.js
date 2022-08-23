@@ -14,6 +14,8 @@ module.exports = {
         db.on("ready", () => {
            console.log('[LOG] MongoDB connected!');
         });
+
+        db.connect();
         
         // Puts an activity
         client.user.setActivity("You through the tall grass.", {
