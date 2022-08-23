@@ -17,7 +17,8 @@
       "chalk": "^4.1.0",
       "fs": "^0.0.1-security",
       "better-sqlite3": "^7.6.2",
-      "keyv": "^4.4.1"
+      "keyv": "^4.4.1",
+      "@keyv/mongo": "^2.1.6"
     },
     "repository": {
       "type": "git",
