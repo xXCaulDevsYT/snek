@@ -1,4 +1,6 @@
 const { readdirSync } = require("fs");
+const Keyv = require('keyv');
+const db = new Keyv(`${process.env.MONGOKEY}`);
 
 module.exports = {
     name: 'info',
@@ -28,6 +30,7 @@ module.exports = {
         .setColor(client.config.embedColor)
 
         message.reply({ allowedMentions: { repliedUser: false }, embeds: [infoEmbed] });
+        db.set(`user_${message.author.id}_commands`, 1);
 
     }
 }
