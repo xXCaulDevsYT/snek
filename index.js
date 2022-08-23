@@ -54,7 +54,7 @@ fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI}=${uid}&
 fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI2}=${uid}&msg=${msg}`)
     .then(res => res.json())
     .then(data => {
-        return message.reply(`${data.cnt} bro`);
+        return message.reply(`${data.cnt}`);
     });
     }
 });
