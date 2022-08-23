@@ -16,7 +16,8 @@
       "glob": "^7.2.0",
       "chalk": "^4.1.0",
       "fs": "^0.0.1-security",
-      "quickmongo": "^5.1.2"
+      "quickmongo": "^5.1.2",
+      "quick.db": "^9.0.6"
     },
     "repository": {
       "type": "git",
