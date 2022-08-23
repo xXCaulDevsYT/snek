@@ -1,3 +1,6 @@
+const Keyv = require('keyv');
+const db = new Keyv(`${process.env.MONGOKEY}`);
+
 module.exports = {
     name: 'ready',
     once: true,
@@ -14,7 +17,7 @@ module.exports = {
         });
         
         // Send a message on the console
-        console.log(`[LOG] mongoose database connected!`)
+        console.log(`[LOG] mongo database connected!`)
         console.log(`[LOG] ${client.user.tag} is now online!`);
         console.log(`[LOG] Bot serving on Ready to serve in ${client.guilds.cache.size} servers`);
         console.log(`[LOG] Bot serving ${client.users.cache.size} users`);
