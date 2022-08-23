@@ -46,12 +46,9 @@ fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI}=${uid}&
     
     // Snek chad
     if(message.channel.id === '1011733312768835656') {
-        if (uid === '879348852333879326') {
-            return message.reply('Fuck you nerd.')
-        }
 
         if (message.author.bot) return;
-fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI2}=${uid}&msg=${msg}`)
+fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI2}=${uid}&msg=${message.content}`)
     .then(res => res.json())
     .then(data => {
         return message.reply(`${data.cnt}`);
