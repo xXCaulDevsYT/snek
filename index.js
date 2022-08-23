@@ -5,6 +5,8 @@ const Discord = require('discord.js');
 const { Client, Collection, Intents } = Discord;
 const handler = require("./src/handlers/index");
 const fetch = require("node-fetch");
+const { Database } = require('quickmongo');
+const db = new Database(process.env.MONGOKEY)
 
 const client = new Client({
     intents: [
@@ -25,6 +27,12 @@ const client = new Client({
     ],
 });
 
+// Mongoose database setup.
+db.on("ready", () => {
+    console.log('[LOG] MongoDB connected!')
+});
+
+// Chatbot connection
 client.on('messageCreate', async (message) => {
     
     let uid = message.author.id;
@@ -43,7 +51,6 @@ fetch(`http://api.brainshop.ai/get?bid=168734&key=${process.env.SNEKAPI}=${uid}&
     });
     }
 });
-
 
 // Call .env file to get Token
 require('dotenv').config();
