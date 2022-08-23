@@ -5,7 +5,7 @@ module.exports = {
     category: 'Bot',
     ownerOnly: false,
     run: async(client, message, args) => {
-        let cu = await db.fetch(`user_${message.author.id}_commands`);
+        let cu = await db.get(`user_${message.author.id}_commands`);
 
         message.reply('Youve used, ' + `${cu}` + ' commands on snek.')
     }
