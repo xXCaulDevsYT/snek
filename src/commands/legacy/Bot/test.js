@@ -1,5 +1,4 @@
-const { Database } = require('quickmongo');
-const db = new Database(process.env.MONGOKEY)
+const db = require('quick.db');
 
 module.exports = {
     name: 'test',
