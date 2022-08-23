@@ -17,7 +17,8 @@
       "chalk": "^4.1.0",
       "fs": "^0.0.1-security",
       "quickmongo": "^5.1.2",
-      "quick.db": "^9.0.6"
+      "quick.db": "^9.0.6",
+      "better-sqlite3": "^7.6.2"
     },
     "repository": {
       "type": "git",
