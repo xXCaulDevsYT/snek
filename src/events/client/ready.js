@@ -1,3 +1,6 @@
+const { Database } = require('quickmongo');
+const db = new Database(process.env.MONGOKEY)
+
 module.exports = {
     name: 'ready',
     once: true,
@@ -6,6 +9,11 @@ module.exports = {
      * @param {Client} client 
      */
     async execute(client) {
+
+        // Mongoose database setup.
+        db.on("ready", () => {
+           console.log('[LOG] MongoDB connected!');
+        });
         
         // Puts an activity
         client.user.setActivity("You through the tall grass.", {
