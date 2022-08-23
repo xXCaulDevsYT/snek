@@ -27,11 +27,6 @@ const client = new Client({
     ],
 });
 
-// Mongoose database setup.
-db.on("ready", () => {
-    console.log('[LOG] MongoDB connected!')
-});
-
 // Chatbot connection
 client.on('messageCreate', async (message) => {
     
