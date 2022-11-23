@@ -31,7 +31,7 @@ client.on('messageCreate', async (message) => {
     let uid = message.author.id;
     let msg = message.content;
 
-    if(message.channel.id === '1011138124723802132') {
+    if(message.channel.id === '1044885009393266732') {
         if (uid === '879348852333879326') {
             return message.reply('Fuck you nerd.')
         }
